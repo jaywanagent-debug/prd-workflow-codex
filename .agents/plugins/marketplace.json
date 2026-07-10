@@ -1,0 +1,20 @@
+{
+  "name": "prd-workflows",
+  "interface": {
+    "displayName": "Prd Workflows"
+  },
+  "plugins": [
+    {
+      "name": "prd-workflow-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/prd-workflow-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

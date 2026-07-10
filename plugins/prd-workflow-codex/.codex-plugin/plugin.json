@@ -1,0 +1,42 @@
+{
+  "name": "prd-workflow-codex",
+  "version": "0.3.0+codex.20260710075905",
+  "description": "A stateful, Korean-first Codex PRD workflow covering build risk, problem framing, hypothesis, PRD generation, adversarial review, edge cases, acceptance criteria, instrumentation, and execution handoff.",
+  "author": {
+    "name": "OneDot"
+  },
+  "homepage": "https://github.com/jaywanagent-debug/prd-workflow-codex",
+  "repository": "https://github.com/jaywanagent-debug/prd-workflow-codex",
+  "license": "MIT AND Apache-2.0",
+  "keywords": [
+    "prd",
+    "product-requirements",
+    "planning",
+    "interview",
+    "execplan",
+    "codex",
+    "korean"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "PRD Workflow for Codex",
+    "shortDescription": "Interview, write, review, and hand off a PRD",
+    "longDescription": "Routes PRD requests through build-risk review, problem and hypothesis framing, a short gap interview, a five-file PRD bundle, adversarial critique, edge cases, acceptance criteria, measurement design, a mandatory review gate, and an optional execution-plan handoff while maintaining a shared decision log and master checklist.",
+    "developerName": "OneDot",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "PRD \ub9cc\ub4e4\uc790. \uc2dc\uc791 \uc804 \uc704\ud5d8 \uac80\ud1a0\ubd80\ud130 \ubb38\uc81c\u00b7\uac00\uc124, \ubcf8 PRD, \ube44\ud310 \uac80\uc218, \uc608\uc678\u00b7\uc644\ub8cc \uc870\uac74, \uce21\uc815 \uc124\uacc4\uae4c\uc9c0 \uc804\uccb4 \ud750\ub984\uc73c\ub85c \uc9c4\ud589\ud574\uc918.",
+      "\uc774 \uae30\uc874 \uae30\ud68d\uc744 \ubcf4\uc874\ud558\uba74\uc11c \ubd80\uc871\ud55c \ubd80\ubd84\ub9cc \ubcf4\uac15\ud574\uc918.",
+      "PRD\ub97c \uac80\ud1a0\ud55c \ub4a4 \uc2e4\ud589 \uacc4\ud68d\uacfc /goal \ud578\ub4dc\uc624\ud504\uae4c\uc9c0 \uc900\ube44\ud574\uc918."
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/prd-workflow-codex.svg",
+    "logo": "./assets/prd-workflow-codex.svg",
+    "screenshots": []
+  }
+}
