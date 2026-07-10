@@ -39,9 +39,10 @@
 
 ## Publish gate
 
-- [ ] Confirm GitHub owner and repository name
-- [ ] Confirm public or private visibility
-- [ ] Replace the README installation placeholder with the final repository path
-- [ ] Show the final publish scope and receive explicit text approval
-- [ ] Create or connect the GitHub repository and push `main`
-- [ ] Test installation from the GitHub marketplace source
+- [x] Confirm GitHub owner and repository name
+- [x] Confirm public visibility for direct-link installation
+- [x] Replace the README installation placeholder with the final repository path
+- [x] Show the final publish scope and receive explicit text approval
+- [x] Create the GitHub repository and push `main`
+- [x] Test installation from the GitHub marketplace source
+- [x] Keep the repository out of external plugin directories and curated listings
