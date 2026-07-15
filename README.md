@@ -35,6 +35,16 @@
 
 이 저장소는 직접 링크 설치용으로만 배포하며 별도의 공개 플러그인 디렉터리나 큐레이션 목록에는 등록하지 않습니다.
 
+## 버전 관리
+
+이 플러그인은 Semantic Versioning을 사용합니다.
+
+- 하위 호환이 깨지는 변경은 major 버전을 올립니다.
+- 새 워크플로 또는 기능 추가는 minor 버전을 올립니다.
+- 버그·문서 수정은 patch 버전을 올립니다.
+
+각 정식 버전은 `vX.Y.Z` Git 태그와 GitHub Release로 남깁니다. 플러그인 manifest의 `+codex.<timestamp>`는 Codex가 업데이트를 다시 읽도록 하는 빌드 메타데이터일 뿐, 정식 배포 버전은 GitHub Release의 `X.Y.Z`를 기준으로 봅니다.
+
 ## 설치
 
 GitHub에 게시한 뒤 저장소를 marketplace로 추가하고 플러그인을 설치합니다.

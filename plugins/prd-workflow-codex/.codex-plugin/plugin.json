@@ -1,6 +1,6 @@
 {
   "name": "prd-workflow-codex",
-  "version": "0.3.0+codex.20260715102633",
+  "version": "0.4.0+codex.20260715104042",
   "description": "A stateful, Korean-first Codex PRD workflow covering build risk, planning, Replan review, PRD generation, validation, and optional /goal handoff.",
   "author": {
     "name": "OneDot"
