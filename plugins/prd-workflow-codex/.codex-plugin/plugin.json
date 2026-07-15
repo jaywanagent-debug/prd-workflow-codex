@@ -1,7 +1,7 @@
 {
   "name": "prd-workflow-codex",
-  "version": "0.3.0+codex.20260710075905",
-  "description": "A stateful, Korean-first Codex PRD workflow covering build risk, problem framing, hypothesis, PRD generation, adversarial review, edge cases, acceptance criteria, instrumentation, and execution handoff.",
+  "version": "0.3.0+codex.20260715102633",
+  "description": "A stateful, Korean-first Codex PRD workflow covering build risk, planning, Replan review, PRD generation, validation, and optional /goal handoff.",
   "author": {
     "name": "OneDot"
   },
@@ -12,6 +12,7 @@
     "prd",
     "product-requirements",
     "planning",
+    "replan",
     "interview",
     "execplan",
     "codex",
@@ -20,8 +21,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "PRD Workflow for Codex",
-    "shortDescription": "Interview, write, review, and hand off a PRD",
-    "longDescription": "Routes PRD requests through build-risk review, problem and hypothesis framing, a short gap interview, a five-file PRD bundle, adversarial critique, edge cases, acceptance criteria, measurement design, a mandatory review gate, and an optional execution-plan handoff while maintaining a shared decision log and master checklist.",
+    "shortDescription": "Replan, write, review, and hand off a PRD",
+    "longDescription": "Routes PRD requests through build-risk review, problem and hypothesis framing, a short gap interview, a five-file PRD bundle, adversarial critique, edge cases, acceptance criteria, measurement design, a Replan approval gate, and an optional /goal execution handoff while maintaining a shared decision log and master checklist.",
     "developerName": "OneDot",
     "category": "Productivity",
     "capabilities": [

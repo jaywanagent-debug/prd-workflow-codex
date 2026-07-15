@@ -1,13 +1,13 @@
 ---
 name: prd-workflow-router
-description: Routes Korean or English PRD requests through the bundled build-risk, problem framing, hypothesis, interview, PRD generation, adversarial review, edge-case, acceptance-criteria, instrumentation, and execution-handoff skills. Use when the user says "PRD 만들자", "PRD 작성하자", "기획하자", "기존 PRD 정리해줘", "PRD 만들고 실행까지", "make a PRD", or asks the agent to choose the complete PRD workflow automatically.
+description: Routes Korean or English PRD requests through the bundled build-risk, problem framing, hypothesis, interview, PRD generation, adversarial review, edge-case, acceptance-criteria, instrumentation, Replan, and execution-handoff skills. Use when the user says "PRD 만들자", "PRD 작성하자", "기획하자", "리플랜으로 검토해줘", "replan this", "기존 PRD 정리해줘", "PRD 만들고 실행까지", "make a PRD", or asks the agent to choose the complete PRD workflow automatically.
 ---
 
 # PRD Workflow Router
 
 ## 목적
 
-이 스킬은 환경별 전용 규칙을 제거한 공개용 PRD 라우터다. 플러그인에 포함된 9개 전문 스킬을 순서대로 연결하고, PRD 작성과 실제 구현을 분리한다. 위험 검토·문제와 가설·인터뷰·문서 체크·비판 검수·예외·완료 조건·측정 설계·승인 게이트를 사용자가 일일이 지정하지 않아도 기본 흐름에 포함한다.
+이 스킬은 환경별 전용 규칙을 제거한 공개용 PRD 라우터다. 플러그인에 포함된 전문 스킬을 순서대로 연결하고, PRD 작성·리플랜 검토·실제 구현을 분리한다. 위험 검토·문제와 가설·인터뷰·문서 체크·비판 검수·예외·완료 조건·측정 설계·승인 게이트를 사용자가 일일이 지정하지 않아도 기본 흐름에 포함한다.
 
 ## 기본 요청 계약
 
@@ -23,6 +23,19 @@ description: Routes Korean or English PRD requests through the bundled build-ris
 - PRD만 요청한 경우 `goaljaby`, `/goal`, 코드 수정, 배포를 자동 시작하지 않는다.
 
 ## 라우팅
+
+### 리플랜 — 계획 전용 합의 검토
+
+`리플랜으로 검토해줘`, `리플랜 모드`, `replan this`처럼 명시했거나, 보안·인증·마이그레이션·개인정보·프로덕션 장애·공개 API 변경·상당한 비용·여러 시스템을 건드리는 계획이면 `prd-replan`을 먼저 사용한다.
+
+1. 현재 계획, 관련 PRD, 코드 또는 운영 사실을 읽는다. PRD 상태 파일이 있으면 먼저 읽고 현재 내용을 보존한 채 필요한 기록만 추가한다.
+2. `PRD_DECISIONS.md`에 Replan Decision Record를 append한다. 원칙 3~5개, 결정 요인, 실행 가능한 선택지 최소 2개, 각 선택지를 고르지 않은 이유를 포함한다.
+3. Decision, Drivers, Alternatives considered, Why chosen, Consequences, Follow-ups 형식으로 ADR-lite를 만든다.
+4. `foundation-build-risk-review`와 `utility-pm-critic`을 **순서대로** 실행해 P0/P1을 해결하거나 명시적으로 기록한다.
+5. 고위험 계획이면 실패 시나리오, 단위·통합·E2E·운영 관측 검증 방법을 추가한다.
+6. 결과는 항상 `pending approval`로 끝낸다.
+
+리플랜은 검토만 한다. 이 단계에서는 `goaljaby`, `/goal`, 코드·설정·데이터 수정, 외부 발신, 배포를 실행하지 않는다. 승인 뒤 사용자가 별도로 “실행 준비” 또는 “goaljaby로 넘겨줘”라고 요청한 경우에만 기존 실행 전환 흐름으로 들어간다.
 
 ### 전체 PRD 체인
 

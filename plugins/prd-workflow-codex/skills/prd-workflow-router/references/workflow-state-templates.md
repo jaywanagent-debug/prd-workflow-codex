@@ -41,9 +41,13 @@ Update both files immediately after each completed stage, user decision, changed
 - [ ] 4. Main PRD — `show-me-the-prd`
   - Result: pending
   - Evidence/output: five-file PRD bundle
+- [ ] 4R. Replan consensus review — only when explicitly requested or high-risk
+  - Result: not_requested
+  - Evidence/output: `PRD_DECISIONS.md` Replan Decision Record
 - [ ] 5. Adversarial review — `utility-pm-critic`
   - Result: pending
   - Evidence/output: `05_PRD_CRITIQUE.md`
+  - Replan note: the Replan critique satisfies this only while the reviewed plan is unchanged; rerun after any plan change.
 - [ ] 6. Edge cases — `deliver-edge-cases`
   - Result: pending
   - Evidence/output: `06_EDGE_CASES.md`
@@ -131,3 +135,55 @@ When a stage is completed or explicitly skipped, mark its checkbox `[x]` and set
 ```
 
 Record interview answers in the user's words when practical. Label agent inference as `inferred`, never as confirmed. When a decision changes, preserve the old entry as superseded and append the new decision plus a change-log row.
+
+## Replan Decision Record
+
+Add this section only when Replan is requested or the plan is high-risk. Append it without replacing prior decisions.
+
+```markdown
+## Replan Decision Record — <YYYY-MM-DD>
+
+- Status: pending_approval
+- Scope:
+- Risk trigger:
+
+### Principles
+
+-
+
+### Decision drivers
+
+1.
+2.
+3.
+
+### Options and invalidation
+
+| Option | Pros | Cons | Decision / invalidation rationale |
+|---|---|---|---|
+| A |  |  |  |
+| B |  |  |  |
+
+### ADR-lite
+
+- Decision:
+- Drivers:
+- Alternatives considered:
+- Why chosen:
+- Consequences:
+- Follow-ups:
+
+### Sequential review
+
+- Build-risk review (`foundation-build-risk-review`):
+- PM critic (`utility-pm-critic`):
+- P0/P1 resolution or explicit acceptance:
+
+### High-risk verification (when applicable)
+
+- Failure scenarios:
+- Unit verification:
+- Integration verification:
+- End-to-end verification:
+- Observability / operational verification:
+```
